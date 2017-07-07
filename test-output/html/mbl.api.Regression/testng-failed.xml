@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [mbl.api.Regression]">
+  <test name="Authentication">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.Authentication"/>
+    </classes>
+  </test> <!-- Authentication -->
+  <test name="DeviceEnrollment">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest"/>
+    </classes>
+  </test> <!-- DeviceEnrollment -->
+  <test name="CardService">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.CardServiceTest"/>
+    </classes>
+  </test> <!-- CardService -->
+  <test name="CardEnrollable">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.CardEnrollableTest"/>
+    </classes>
+  </test> <!-- CardEnrollable -->
+  <test name="CardEnrollment">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.CardEnrollmentServiceTest"/>
+    </classes>
+  </test> <!-- CardEnrollment -->
+  <test name="DeviceEnrollment(failed)">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.Authentication">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.Authentication -->
+      <class name="com.pnc.mblapi.automation.api.CardEnrollmentServiceTest">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardEnrollmentServiceTest -->
+      <class name="com.pnc.mblapi.automation.api.CardEnrollableTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardEnrollableTest -->
+      <class name="com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest">
+        <methods>
+          <include name="verifyStatus"/>
+          <include name="verifyDeviceEnrollmentResponseStatus"/>
+          <include name="afterTest"/>
+          <include name="verifyDeviceIdfromResponse"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest -->
+      <class name="com.pnc.mblapi.automation.api.CardServiceTest">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardServiceTest -->
+    </classes>
+  </test> <!-- DeviceEnrollment(failed) -->
+  <test name="CardEnrollment(failed)">
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.Authentication">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.Authentication -->
+      <class name="com.pnc.mblapi.automation.api.CardEnrollmentServiceTest">
+        <methods>
+          <include name="verifyCardEnrollmentStatus"/>
+          <include name="verifyCardEnrollmentResponseStatusTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardEnrollmentServiceTest -->
+      <class name="com.pnc.mblapi.automation.api.CardEnrollableTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardEnrollableTest -->
+      <class name="com.pnc.mblapi.automation.api.CardServiceTest">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.CardServiceTest -->
+      <class name="com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest -->
+    </classes>
+  </test> <!-- CardEnrollment(failed) -->
+</suite> <!-- Failed suite [mbl.api.Regression] -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="1" name="mbl.api.Regression" verbose="1" parallel="false" preserve-order="true">
+    <test name="Authentication" preserve-order="true" parallel="false">
+        <classes>
+            <class name="com.pnc.mblapi.automation.api.Authentication"/>
+        </classes>
+    </test>
+
+</suite>

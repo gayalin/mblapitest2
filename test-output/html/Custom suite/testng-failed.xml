@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Custom suite]" parallel="none">
+  <parameter name="parallel methods" value="2"/>
+  <parameter name="threadcount" value="2"/>
+  <test name="mblapitest(failed)" parallel="none">
+    <groups>
+      <run>
+        <include name="SmokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest">
+        <methods>
+          <include name="verifyDeviceEnrollmentResponseStatus"/>
+        </methods>
+      </class> <!-- com.pnc.mblapi.automation.api.DeviceEnrollmentServiceTest -->
+    </classes>
+  </test> <!-- mblapitest(failed) -->
+</suite> <!-- Failed suite [Custom suite] -->
