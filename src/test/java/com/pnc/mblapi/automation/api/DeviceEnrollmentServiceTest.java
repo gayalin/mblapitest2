@@ -1,7 +1,7 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.response.Response;
 import groovy.util.logging.Log;
+import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.testng.Assert;
@@ -15,6 +15,7 @@ public class DeviceEnrollmentServiceTest {
     private static Logger log = Logger.getLogger(Log.class);
     private static DeviceEnrollmentApi deviceEnrollmentApi;
     private static Authentication authentication;
+    private static Response res;
 
 
     @BeforeClass
@@ -30,7 +31,7 @@ public class DeviceEnrollmentServiceTest {
     public void verifyDeviceEnrollmentResponseStatus() throws JSONException, InterruptedException {
         //Verify Device Enrollment Response status code
         log.info("DeviceEnrollment Api - Started & verify the response code");
-        Response res = deviceEnrollmentApi.getResponse();
+        res = deviceEnrollmentApi.getResponse();
         log.info("DeviceEnrollment Api - Asserting the response code");
         Assert.assertEquals(res.getStatusCode(), 200, "Device Enrollment Response Status code Check Failed!");
     }

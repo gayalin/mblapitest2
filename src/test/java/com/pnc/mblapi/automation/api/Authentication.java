@@ -1,7 +1,8 @@
 package com.pnc.mblapi.automation.api;
 import com.pnc.mblapi.automation.api.*;
-import com.jayway.restassured.response.Response;
+import static io.restassured.RestAssured.given;
 import groovy.util.logging.Log;
+import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.testng.annotations.Test;
@@ -9,7 +10,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 
-import static com.jayway.restassured.RestAssured.given;
 
 /**
  * Created by GWITHARANA on 4/20/2017.
@@ -24,11 +24,11 @@ public class Authentication {
     }
 
     @Test(groups = {"SmokeTest"})
-    public void loginService()throws InterruptedException {
+    public void loginService()throws JSONException, InterruptedException {
         /*********validate user id API ********************************************************/
         log.info("Verify Response Status");
         UserIdApi userIdApi = new UserIdApi();
-        Response res1 = userIdApi.getResponse();
+        Response res1 = userIdApi.getResponseDataPower();
         log.info("Asserting the response code");
         Assert.assertEquals(res1.getStatusCode(), 200, "UserID Response Status Check Failed!");
         log.info("Verify authentication status");
@@ -65,6 +65,8 @@ public class Authentication {
 
 
     }
+
+
 
     @AfterTest
     public void afterTest(){

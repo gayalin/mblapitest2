@@ -10,7 +10,7 @@ public class UserIdRequestBody {
 
 
 public void setUserId() {
-    userId = "Paytest01";
+    userId = "Paytest04";
 }
 public void setDevicePrint() {
     devicePrint = "Postman";

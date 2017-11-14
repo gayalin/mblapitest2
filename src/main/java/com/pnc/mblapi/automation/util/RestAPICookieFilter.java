@@ -1,11 +1,10 @@
 package com.pnc.mblapi.automation.util;
 
-import com.jayway.restassured.filter.Filter;
-import com.jayway.restassured.filter.FilterContext;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.FilterableRequestSpecification;
-import com.jayway.restassured.specification.FilterableResponseSpecification;
-
+import io.restassured.filter.Filter;
+import io.restassured.filter.FilterContext;
+import io.restassured.response.Response;
+import io.restassured.specification.FilterableRequestSpecification;
+import io.restassured.specification.FilterableResponseSpecification;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,8 +17,7 @@ public class RestAPICookieFilter implements Filter {
 
     private static RestAPICookieFilter instance;
 
-    public RestAPICookieFilter() {
-    }
+
 
     public static RestAPICookieFilter instance() {
         if (instance == null) {

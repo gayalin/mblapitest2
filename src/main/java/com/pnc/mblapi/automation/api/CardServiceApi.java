@@ -1,13 +1,13 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.builder.RequestSpecBuilder;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
+import static io.restassured.RestAssured.given;
 import com.pnc.mblapi.automation.util.RestAPICookieFilter;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.jayway.restassured.RestAssured.given;
 
 /**
  * Created by GWITHARANA on 4/24/2017.

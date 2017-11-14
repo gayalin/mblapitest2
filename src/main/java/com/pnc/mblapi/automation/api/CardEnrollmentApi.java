@@ -1,19 +1,20 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.builder.RequestSpecBuilder;
-import com.jayway.restassured.path.json.JsonPath;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
+
 import com.pnc.mblapi.automation.requestBody.CardEnrollmentRequestBody;
 import com.pnc.mblapi.automation.util.RestAPICookieFilter;
 import com.pnc.mblapi.automation.util.RestUtil;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import static io.restassured.RestAssured.given;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jayway.restassured.RestAssured.given;
+
 
 /**
  * Created by GWITHARANA on 4/21/2017.

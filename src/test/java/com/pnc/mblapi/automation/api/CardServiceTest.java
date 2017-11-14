@@ -1,8 +1,8 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.response.Response;
 import com.pnc.mblapi.automation.api.CardServiceApi;
 import groovy.util.logging.Log;
+import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.testng.Assert;
@@ -18,6 +18,7 @@ public class CardServiceTest{
     private static Authentication authentication;
     private static DeviceEnrollmentApi deviceEnrollmentApi;
     private CardServiceApi cardServiceApi;
+    private static Response res;
 
     @BeforeTest
     public void beforeTest()throws JSONException, InterruptedException{
@@ -32,7 +33,7 @@ public class CardServiceTest{
     @Test(priority = 1)
     public void verifyCardServiceResponseStatusCode() throws JSONException, InterruptedException {
         //Verify Device Enrollment Response status code
-        Response res = cardServiceApi.getResponse();
+        res = cardServiceApi.getResponse();
         cardServiceApi.ResponseLogTest();
         Assert.assertEquals(res.getStatusCode(), 200, "Card Service Response Status code Check Failed!");
     }

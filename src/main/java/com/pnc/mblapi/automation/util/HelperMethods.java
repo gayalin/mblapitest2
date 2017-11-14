@@ -1,8 +1,9 @@
 package com.pnc.mblapi.automation.util;
 
+
+import io.restassured.response.Response;
 import org.testng.Assert;
 
-import com.jayway.restassured.response.Response;
 
 public class HelperMethods {
 	 /*

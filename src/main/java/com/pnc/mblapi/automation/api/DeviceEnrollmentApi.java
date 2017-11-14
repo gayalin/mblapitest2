@@ -1,19 +1,18 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.builder.RequestSpecBuilder;
-import com.jayway.restassured.path.json.JsonPath;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
 import com.pnc.mblapi.automation.requestBody.DeviceEnrollmentRequestBody;
 import com.pnc.mblapi.automation.util.RestAPICookieFilter;
 import com.pnc.mblapi.automation.util.RestUtil;
 import groovy.util.logging.Log;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import static io.restassured.RestAssured.given;
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import static com.jayway.restassured.RestAssured.given;
 
 /**
  * Created by GWITHARANA on 4/24/2017.
@@ -86,7 +85,7 @@ public class DeviceEnrollmentApi {
 
     public String getDeviceIdActual(){
       String deviceIdActual =  setJsonPath().get("data.vtsEncryptionData.deviceId");
-      String token = setJsonPath().get("data.androidpay.visatoken[1].device.devicetype")
+      String token = setJsonPath().get("data.androidpay.visatoken[1].device.devicetype");
         System.out.println(deviceIdActual);
         return deviceIdActual;
     }

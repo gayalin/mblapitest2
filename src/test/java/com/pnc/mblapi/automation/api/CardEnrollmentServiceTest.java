@@ -1,8 +1,9 @@
 package com.pnc.mblapi.automation.api;
 
-import com.jayway.restassured.response.Response;
+import static io.restassured.RestAssured.given;
 import com.pnc.mblapi.automation.api.CardEnrollmentApi;
 import groovy.util.logging.Log;
+import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.testng.Assert;

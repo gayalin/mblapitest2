@@ -1,9 +1,9 @@
 package com.pnc.mblapi.automation.api;
 
 import groovy.util.logging.Log;
+import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
-import com.jayway.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

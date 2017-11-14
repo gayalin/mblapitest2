@@ -1,15 +1,15 @@
 package com.pnc.mblapi.automation.api;
-
-import com.jayway.restassured.builder.RequestSpecBuilder;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
+import static io.restassured.RestAssured.given;
 import com.pnc.mblapi.automation.requestBody.PasswordRequestBody;
 import com.pnc.mblapi.automation.util.RestAPICookieFilter;
 import com.pnc.mblapi.automation.util.RestUtil;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONException;
-import com.jayway.restassured.path.json.JsonPath;
 
-import static com.jayway.restassured.RestAssured.given;
+
 
 /**
  * Created by GWITHARANA on 4/19/2017.
@@ -21,7 +21,8 @@ public class PasswordApi {
     public static RequestSpecification requestSpec;
     public static String PassWordApiUrl= "/api/mbl/v1/auth/validate/password";
     public static Response res2;
-    private JsonPath jp;
+    private static JsonPath jp;
+
 
 
     public PasswordRequestBody setPasswordRequestBody(){

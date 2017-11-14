@@ -6,7 +6,8 @@ package com.pnc.mblapi.automation.util;
 public class Constant {
 
 
-        public static final String URL = "http://www.store.demoqa.com";
+        public static final String BaseURLDataPower = "https://servicelink1qa.pnc.com:443/mbl/massmarket";
+        public static final String BaseURLQA2 = "https://mobile-qa2.pnc.com";
 
         public static final String Username = "testuser_1";
 
