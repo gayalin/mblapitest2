@@ -30,16 +30,7 @@ public class CardEnrollableApi {
         return builder.build();
     }
 
-    public void RequestLogTest() {
-        RestUtil.https()
-                .filter(RestAPICookieFilter.instance())
-                .spec(getRequestSpecBuilder())
-                .when()
-                .log()
-                .all()
-                .get(CardEnrollableUrl);
 
-    }
 
     public void ResponseLogTest() {
         given()

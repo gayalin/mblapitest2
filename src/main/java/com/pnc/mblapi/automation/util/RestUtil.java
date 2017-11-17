@@ -24,48 +24,7 @@ public class RestUtil {
     public static RequestSpecification requestSpec;
 
 
-    public static RequestSpecification https() {
 
-//        KeyStore keyStore = null;
-//        SSLConfig config = null;
-//
-//                try {
-//                    keyStore = KeyStore.getInstance("PKCS12");
-//                    keyStore.load(new FileInputStream("datapower.p12"),
-//                    "datapower".toCharArray());
-//
-//        } catch (Exception ex) {
-//            throw new RuntimeException("Unable to load the P12 file for datapower");
-//        }
-//
-//        try {
-//            SSLSocketFactory clientAuthFactory = new SSLSocketFactory(keyStore);
-//            // set the config in rest assured
-//            config = new SSLConfig().with().sslSocketFactory(clientAuthFactory).and().allowAllHostnames();
-//            RestAssured.config = RestAssured.config().sslConfig(config);
-//        } catch (Exception e) {
-//            throw new RuntimeException("Unable to initialize SSL Socket Factory");
-//        }
-
-        final HttpClient httpClient;
-        try {
-            httpClient = SslTrustContext.getClient();
-        } catch (Exception e) {
-            throw new RuntimeException("Client initialziation failed");
-        }
-
-        RestAssured.config().
-                httpClient(httpClientConfig().httpClientFactory(
-                        new HttpClientConfig.HttpClientFactory() {
-
-                            @Override
-                            public HttpClient createHttpClient() {
-                                return httpClient;
-                            }
-                        }));
-
-        return RestAssured.given();
-    }
 
     /*
     ***Sets Base URI***

@@ -47,13 +47,10 @@ public class UserIdApi {
     }
 
     public Response getResponse() {
-        res1 = RestUtil.https().log().all()
-
-                .keyStore(new File("/datapower.p12"), "datapower")
-                .relaxedHTTPSValidation()
+        res1 = given()
                 .filter(RestAPICookieFilter.instance())
-                .spec(getRequestSpecBuilder()).when().post(UserIdUrl);
-                 res1.print();
+                .spec(getRequestSpecBuilder())
+                .when().post(UserIdUrl);
         return res1;
 
     }
